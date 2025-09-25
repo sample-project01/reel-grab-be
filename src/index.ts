@@ -3,7 +3,7 @@ import encryptString from "./utils/utils.js"
 import cors from "cors"
 
 const app = express()
-const allowedOrigin = 'http://reel-grab-fe.vercel.app/'
+const allowedOrigin = 'http://reel-grab-fe.vercel.app'
 app.use(express.json())
 app.use(cors({
     origin:allowedOrigin,
