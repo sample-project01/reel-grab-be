@@ -9,10 +9,8 @@ app.use(express.json())
 app.use(cors({
     origin:allowedOrigin,
 }))
-app.get("/test", rateLimiter, (req, res) => {
-  res.json({ success: true, msg: "Request allowed" });
-});
-app.post("/reel",async(req,res)=>{
+
+app.post("/reel",rateLimiter,async(req,res)=>{
     
     
     try {
