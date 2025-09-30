@@ -1,1 +1,1 @@
-{"root":["./src/index.ts","./src/utils/utils.d.ts","./src/utils/utils.js"],"version":"5.9.2"}
+{"root":["./src/index.ts","./src/ratelimiter.ts","./src/utils/utils.d.ts","./src/utils/utils.js"],"version":"5.9.2"}

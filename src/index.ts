@@ -1,6 +1,7 @@
 import express from "express"
 import encryptString from "./utils/utils.js"
 import cors from "cors"
+import rateLimiter from "./rateLimiter.js"
 
 const app = express()
 const allowedOrigin = 'https://reel-grab-fe.vercel.app'
@@ -8,7 +9,9 @@ app.use(express.json())
 app.use(cors({
     origin:allowedOrigin,
 }))
-
+app.get("/test", rateLimiter, (req, res) => {
+  res.json({ success: true, msg: "Request allowed" });
+});
 app.post("/reel",async(req,res)=>{
     
     
